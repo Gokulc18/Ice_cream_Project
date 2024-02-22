@@ -1,0 +1,779 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*-------- Header Section --------*/
+
+nav {
+    background-color: rgb(221, 221, 221);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    color: rgb(221, 60, 95);
+    position:sticky;
+    top:0;
+    z-index: 999;
+}
+
+nav h1 {
+    font-size: 35px;
+    cursor: pointer;
+    color:gold;
+    font-family: 'Indie Flower', cursive;
+    background: linear-gradient(to right,blue,red);
+    background-clip: text;
+    color: transparent;
+}
+
+.subMenu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;  
+    transition: all 0.5s; 
+}
+
+.subMenu a {
+    font-size: 18px;
+    color:rgb(21, 93, 201);
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.subMenu a:hover {
+    color:rgb(223, 23, 23);
+    text-decoration:wavy;
+}
+
+.menuIcon {
+    font-size: 25px;
+}
+
+nav input:checked~.subMenu {
+    left: 0;
+}
+
+nav input, nav .menuIcon {
+ display: none;
+}
+
+/*--------- Background Image and welcome message ----------*/
+
+.img img{
+    object-fit: cover;
+    width:100%;
+    height:100vh;
+    position: relative;
+    filter:brightness(50%)
+}
+.img img:hover{
+    filter:brightness(100%);
+    transition:transform .8s ease-in-out;
+    transform: scale(1.10) ;
+}
+.wel .glow{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    color:white;
+    text-align: center;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+   
+@keyframes glow {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073;
+    
+    to {
+      text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6;
+    }
+}
+}
+
+.wel button{
+    position:absolute;
+    top:68%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    width:200px;
+    padding:10px;
+    border:1px solid rgb(31, 175, 185);
+    font-size: 18px;
+    background-color:rgb(31, 175, 185);
+    color:white;
+    cursor: pointer;
+}
+.wel button:hover{
+    transition: 0.5s;
+    background-color: white;
+    border:1px solid rgb(31, 175, 185);
+    color:rgb(31, 175, 185) ;
+}
+
+/*--------- Our ice creams ----------- */
+
+.ouricecreams h1{
+   
+    background: linear-gradient(to bottom, #e4e01f,rgb(32, 123, 165),#ff0080);
+    background-clip: text;
+    color:transparent;
+    font-size:45px;
+    text-align:center;
+    padding:60px 0px 20px;
+}
+.ouricecreams p{
+    font-size:18px;
+    text-align:center;
+    line-height: 28px;
+
+}
+.icecream{
+    display:flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    justify-content: space-around;
+}
+.icecream img{
+    filter: brightness(50%);
+    object-fit: cover;
+    border-radius:20px;
+    border:1px solid grey;
+    box-shadow: 10px 10px 10px rgb(73, 71, 71);         
+    margin: 50px 0px;
+    height:330px;
+    width:230px;
+}
+.icecream img:hover{
+    filter:brightness(100%);
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+.ouricecreams .seemorebtn{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.ouricecreams button{
+    width:200px;
+    padding:10px;
+    font-size:18px;
+    border:1px solid rgb(235, 85, 4);
+    color:white;
+    background-color:rgb(235, 85, 4);
+    margin-bottom: 100px;
+    cursor: pointer;
+}
+.ouricecreams button:hover{
+    background-color: white;
+    color:rgb(235, 85, 4);
+    transition: 0.5s;
+}
+
+/* ---------- About Us section ----------*/
+
+.overall{
+    width:100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.overall .imgbox1{
+    width:50%;
+    height:100vh;
+    overflow: hidden;
+}
+.overall .imgbox1 img{
+    filter: brightness(50%);
+    object-fit: cover;
+    min-height:100%;
+    width:100%;
+}
+.overall .imgbox1 img:hover{
+    filter: brightness(100%);
+    transition:transform .8s ease-in-out;
+    transform: scale(1.10) ;
+}
+.overall .box2{
+    width:50%;
+    padding:0px 50px;
+}
+.box2 h1{
+    background: linear-gradient(to top, #40e0d0,#ff0080);
+    background-clip: text;
+    color:transparent;
+    font-size:35px;
+    padding:30px 0px;
+}
+.box2 p{
+    font-size: 18px;
+    line-height: 25px;
+}
+.box2 button{
+    width:200px;
+    padding:10px;
+    border:1px solid  rgb(242,100,131);
+    font-size: 18px;
+    color:white;
+    background-color: rgb(242,100,131);
+    margin:30px 0px;
+    cursor: pointer;
+}
+.box2 button:hover{
+    transition: 0.5s;
+    color:rgb(242,100,131);
+    background-color: white;
+}
+
+/* -------- Have a great treat section --------- */
+
+.overall2{
+    width:100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.overall2 .imgbox2{
+    width:50%;
+    min-height:100vh;
+    overflow: hidden;
+}
+.overall2 .imgbox2 img{
+    filter: brightness(50%);
+    object-fit: cover;
+    min-height:100vh;
+    width:100%;
+}
+.imgbox2 img:hover{
+    filter:brightness(100%);
+    transition:transform .8s ease-in-out;
+    transform: scale(1.10) ;
+}
+.overall2 .box3{
+    width:50%;
+    padding:50px;
+}
+.box3 h1{
+    background: linear-gradient(to right,#ff0080,#ff8c00, #40e0d0);
+    background-clip: text;
+    color:transparent;
+    font-size:35px;
+    padding:30px 0px;
+}
+.box3 p{
+    font-size: 18px;
+    line-height: 25px;
+}
+.box3 button{
+    width:200px;
+    padding:10px;
+    border:1px solid  rgb(235, 85, 4);
+    font-size: 18px;
+    color:white;
+    background-color: rgb(235, 85, 4);
+    margin:30px 0px;
+    cursor: pointer;
+}
+.box3 button:hover{
+    transition: 0.5s;
+    color:rgb(235, 85, 4);
+    background-color:white ;
+}
+
+/*--------- Forms and Location  section ----------*/
+
+.overall3{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.overall3 .box4{
+    margin: auto;
+    padding-left: 100px;
+    width:50%;
+    min-height:100vh;
+    background-color: black;
+}
+.overall3 .box4 h1{
+    color:#e4e01f;
+}
+.overall3 form input{
+    width:80%;
+    height:40px;
+    padding:25px;
+    font-size: 18px;
+    margin:10px 0px;
+    border-radius: 5px;
+    border:none;
+}
+.overall3 form input:focus{
+     box-shadow: 0px 0px 5px #fe21a2,
+                0px 0px 20px #fe21a2,
+                0px 0px 50px #fe21a2;
+}
+.overall3 .message{
+    height:150px;
+}
+.overall .message:focus{
+    box-shadow: 0px 0px 5px #fe21a2,
+    0px 0px 20px #fe21a2,
+    0px 0px 50px #fe21a2;
+}
+form button{
+    width:200px;
+    padding:10px;
+    border:1px solid rgb(242,100,131);
+    font-size: 18px;
+    color:white;
+    background-color: rgb(242,100,131);
+    margin:30px 0px;
+    cursor: pointer;
+}
+.box4 form button:hover{
+    transition: 0.5s;
+    background-color:white ;
+    color:rgb(242,100,131);
+}
+.box4 h1{
+    color:white;
+    font-size:35px;
+    padding:40px 0px;
+}
+
+/* -------- Map Location ---------*/
+.overall3 .map{
+    width:50%;
+    height:100vh;
+    background-color: rgb(156, 156, 156);
+}
+
+.overall3 .map iframe{
+   
+    margin: 85px 80px;
+    width:75%;
+    height:70vh;
+    border:2px solid blue;
+    
+}
+
+/* --------- Testimonial ---------*/
+
+.overalltestimonial{
+    width:100%;
+    min-height:100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.overalltestimonial .card{
+    width:50%;
+    text-align: center;
+}
+.card h1{
+    background: linear-gradient(to bottom,#3321d8, #40e0d0);
+    background-clip: text;
+    color:transparent;
+    font-size: 35px;
+    margin:40px 0px;
+}
+.content div{
+    overflow: hidden;
+}
+.content img{
+    object-fit: cover;
+    filter: brightness(50%);
+    height:180px;
+    width:180px;
+    border-radius:50%;
+    border:5px solid grey;
+}
+.content img:hover{
+    filter:brightness(100%);
+
+}
+.content h3{
+    color:rgb(235, 85, 4);
+    padding:20px 0px;
+    font-size: 30px;
+}
+.content h2{
+    margin: 20px 0px;
+}
+.content p{
+    font-size: 18px;
+    line-height: 25px;
+}
+.content{
+    padding:40px;
+    background-color: white;
+}
+.layout{
+    border: 1px solid black;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+}
+
+/* --------- Footer ----------*/
+.footer{
+    margin-top:80px;
+    width:100%;
+    background-color: rgb(237,235,240);
+}
+.footer .details{
+    padding:60px 0px;
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-around;
+    
+    
+}
+.location,.call,.mail{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.details span{
+    color: #f26483;
+}
+ .fa-location-dot, .fa-phone,.fa-envelope{
+    cursor: pointer;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    border: 1px solid #f26483;
+    color: #f26483;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 18px;
+    margin-right: 10px;
+    padding:10px;
+}
+
+
+/* ----------- Follow Us ----------*/
+
+.followus{
+    text-align: center;
+}
+.followus h1{
+    background: linear-gradient(to top,#ff8c00,#4d16a5, #29cf53);
+    background-clip: text;
+    color:transparent;
+    padding-bottom: 20px;
+}
+.followus p{
+    font-size:18px;
+    line-height: 25px;
+}
+.fa-facebook,.fa-twitter,.fa-instagram,.fa-youtube{
+    cursor: pointer;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    border: 1px solid #f26483;
+    color: #f26483;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 20px;
+    margin-right: 10px;
+    padding:10px;   
+}
+.fa-facebook:hover{
+    color:blue;
+}
+.fa-twitter:hover{
+    color:rgb(46, 154, 190);
+}
+.fa-instagram:hover{
+    color:#fe21a2;
+}
+.fa-youtube:hover{
+    color:red;
+}
+
+.icons{
+    padding:30px 0px;
+}
+.copyright{
+    margin-bottom: 20px;
+}
+.footer img{
+    height:100%;
+    width:100%;
+    object-fit:cover;
+}
+
+
+
+/* --------------------------- Media Query  for  Mobile ----------------------------- */
+
+@media only screen and (min-width:320px) and (max-width:500px)
+{
+    /* nav bar */
+    .subMenu {
+        position: fixed;
+        z-index: 3;
+        background-color: rgb(221, 221, 221);
+        color:rgb(21, 93, 201);
+        left: -100%;
+        top: 81px;
+        height: 80vh;
+        flex-direction: column;
+        justify-content: left;
+        padding: 40px 0px 0px;
+        
+    }
+    .subMenu a  {
+        font-size: 25px;
+        color:rgb(21, 93, 201);
+    }
+    nav .menuIcon {
+        display: inline;
+    }
+    
+    /* Welcome message */
+
+    .wel .glow{
+        font-size: 40px;
+    }
+    .wel button{
+        top:75%;
+    }
+    
+    /* our ice creams */
+    .icecream{
+        flex-direction: column;
+    }
+    .icecream img{       
+        margin: 20px 0px;
+    }
+    .ouricecreams button{
+        margin-bottom: 10px;
+        margin-top: 25px;
+    }
+    /* about us */
+    .overall{
+        flex-direction: column;
+    }
+    .overall .imgbox1 {
+        width:100%;
+        height:100vh;
+    }
+    .overall .box2 {
+        width:100%;
+    }
+    .overall .imgbox1 img{
+        width:100%;
+        height:100vh;
+        object-fit:contain;
+    }
+
+    /* Have a great treat */
+
+    .overall2{
+        flex-direction: column;
+    }
+    .overall2 .imgbox2{
+        width:100%;
+        height:80vh;
+       
+    }
+    .overall2 .imgbox2 img{
+        object-fit: contain;
+        height:100%;
+        width:100%;
+    }
+    .overall2 .box3{
+        width:100%;
+        
+    }
+
+    /* Forms */
+
+    .overall3{
+       flex-direction: column;
+    }
+    .overall3 .box4{
+        padding-left:15px;
+        width:100%;
+        
+    }
+    .overall3 form input{
+        width:95%;
+    }
+    .overall3 .message{
+        height:150px;
+    }
+    form button{
+       margin-left: 80px;
+    }
+    
+    .box4 h1{
+        color:white;
+        font-size:35px;
+        padding:40px 0px;
+    }
+    
+    /* Map Location */
+
+    .overall3 .map{
+        width:100%;
+    }
+    
+    .overall3 .map iframe{
+        margin: 85px 55px;
+    }
+
+    /* testimonial */
+
+    .overalltestimonial{
+       flex-direction: column;
+    }
+    .overalltestimonial .card{
+        width:90%;
+        min-height:100vh;
+    }
+    
+    /* Footer */
+    
+    .footer .details{
+        flex-direction: column;
+        row-gap: 20px;
+    }
+}  
+
+/*--------------------------- Media query for Tab View ----------------------------*/
+
+@media only screen and (min-width:500px) and (max-width:800px) {
+    .subMenu {
+        position: fixed;
+        z-index: 3;
+        background-color: rgb(221, 221, 221);
+        color:rgb(21, 93, 201);
+        left: -100%;
+        top: 81px;
+        width:40%;
+        height: 80vh;
+        flex-direction: column;
+        justify-content: left;
+        padding: 40px 0px 0px;
+    }
+    .subMenu a  {
+        font-size: 25px;
+         color:rgb(21, 93, 201);
+    }
+    nav .menuIcon {
+        display: inline;
+    }
+    /* Welcome message */
+    
+    .wel .glow{
+        font-size: 40px;
+    }
+    .wel button{
+        top:70%;
+    }
+
+    /* our ice creams */
+
+    .icecream img{
+        height: 330px;
+        width:280px;
+    }
+
+    /* about us */
+
+    .overall{
+        flex-direction: column;
+    }
+    .overall .imgbox1 {
+        width:100%;
+        height:100vh;
+    }
+    .overall .box2 {
+        width:100%;
+    }
+    .overall .imgbox1 img{
+        width:100%;
+        height:100vh;
+        object-fit:contain;
+    }
+    /* Have a great treat */
+
+    .overall2{
+        flex-direction: column;
+    }
+    .overall2 .imgbox2{
+        width:100%;
+        height:80vh;
+       
+    }
+    .overall2 .imgbox2 img{
+        object-fit: contain;
+        height:100%;
+        width:100%;
+    }
+    .overall2 .box3{
+        width:100%;
+        
+    }
+    /* Forms */
+    .overall3{
+       flex-direction: column;
+       margin-top:50px;
+    }
+    .overall3 .box4{
+        /* padding-left:15px; */
+        width:100%;
+        
+    }
+   
+    .box4 h1{
+        color:white;
+        font-size:35px;
+        padding:40px 0px;
+    } 
+    
+    /* Map Location */
+    .overall3 .map{
+        width:100%;
+        height:100vh;
+    }
+    
+    /* testimonial */
+
+    .overalltestimonial{
+       flex-direction: column;
+    }
+    .overalltestimonial .card{
+        width:90%;
+        min-height:100vh;
+    }
+    
+    /* Footer */
+    
+    .footer .details{
+        flex-direction: column;
+        row-gap: 20px;
+    }
+}
+
+/* ----------------------------- Media query for laptop --------------------- */
+
+@media only screen and (min-width:800px) and (max-width:1400px){
+   
+}
